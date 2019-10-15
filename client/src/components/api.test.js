@@ -13,16 +13,16 @@ test("Gets the element text Tennis", () => {
   
 });
 
-it('Find first instance of name', () => {
+it('Find first element of name', () => {
   const wrapper = rtl.render(<Api/>);
 expect(wrapper.findByText(/name/i));
   
 
   });
 
-it("Find the first instance of text name", () => {
+it("Find the first element of country", () => {
   const wrapper = rtl.render(<Api />);
-  expect(wrapper.findByText(/name/i));
+  expect(wrapper.findByText(/country/i));
 });
 
 // test("Render h1", () => {
