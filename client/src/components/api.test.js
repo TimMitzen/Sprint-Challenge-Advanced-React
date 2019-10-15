@@ -5,19 +5,22 @@ import Api from "../App";
 
 afterEach(rtl.cleanup);
 
-test("Render Google", () => {
+test("Gets the element text Tennis", () => {
   const wrapper = rtl.render(<Api />);
   expect(wrapper.getByText(/tennis/i));
+   
+  
   
 });
 
-it('Find text countery', () => {
-  const wrapper = rtl.render(<Api />);
-   expect(wrapper.findByText(/country/i));
+it('Find first instance of name', () => {
+  const wrapper = rtl.render(<Api/>);
+expect(wrapper.findByText(/name/i));
   
-});
 
-it("Find text name", () => {
+  });
+
+it("Find the first instance of text name", () => {
   const wrapper = rtl.render(<Api />);
   expect(wrapper.findByText(/name/i));
 });

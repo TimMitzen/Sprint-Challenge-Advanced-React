@@ -29,7 +29,7 @@ export class Api extends Component {
       <div>
         {this.state.googleTennis.map((player, index) => (
           <div key={index}>
-            <h1>Name: {player.name}</h1>
+            <h1 className='name'>Name: {player.name}</h1>
             <h2 data-testid='h2'>Country: {player.country}</h2>
           </div>
         ))}

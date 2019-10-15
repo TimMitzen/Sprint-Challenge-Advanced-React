@@ -4,13 +4,14 @@ import "@testing-library/jest-dom/extend-expect";
 import Navbar from "./navbar";
 afterEach(rtl.cleanup);
 
-test("Render Title", () => {
+test("Render Title of navbar", () => {
   const wrapper = rtl.render(<Navbar />);
-  expect(wrapper.findByText(/tennisPlayer Data/i));
+  const element = wrapper.getByText(/tennisplayer data/i);
+  expect(element).toBeVisible();
 
 });
 
-test("Render Classname navbar", () => {
+test("Find navbar by Test id", () => {
   const wrapper = rtl.render(<Navbar />);
   expect(wrapper.findByTestId(/navbar/i));
 
