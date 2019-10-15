@@ -7,15 +7,19 @@ afterEach(rtl.cleanup);
 
 test("Render Google", () => {
   const wrapper = rtl.render(<Api />);
-  wrapper.getByText(/tennis/i);
+  expect(wrapper.getByText(/tennis/i));
+  
 });
 
-it("Render  Name", () => {
-  const wrapper = rtl.render(<h1>Name:</h1>);
+it('Find text countery', () => {
+  const wrapper = rtl.render(<Api />);
+   expect(wrapper.findByText(/country/i));
+  
 });
 
-it("Render country", () => {
-  const wrapper = rtl.render(<h2>Country:</h2>);
+it("Find text name", () => {
+  const wrapper = rtl.render(<Api />);
+  expect(wrapper.findByText(/name/i));
 });
 
 // test("Render h1", () => {
