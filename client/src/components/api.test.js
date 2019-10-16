@@ -5,17 +5,24 @@ import Api from "../App";
 
 afterEach(rtl.cleanup);
 
-test("Render Google", () => {
+test("Gets the element text Tennis", () => {
   const wrapper = rtl.render(<Api />);
-  wrapper.getByText(/tennis/i);
+  expect(wrapper.getByText(/tennis/i));
+   
+  
+  
 });
 
-it("Render  Name", () => {
-  const wrapper = rtl.render(<h1>Name:</h1>);
-});
+it('Find first element of name', () => {
+  const wrapper = rtl.render(<Api/>);
+expect(wrapper.findByText(/name/i));
+  
 
-it("Render country", () => {
-  const wrapper = rtl.render(<h2>Country:</h2>);
+  });
+
+it("Find the first element of country", () => {
+  const wrapper = rtl.render(<Api />);
+  expect(wrapper.findByText(/country/i));
 });
 
 // test("Render h1", () => {
